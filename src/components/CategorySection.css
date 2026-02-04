@@ -1,0 +1,49 @@
+.category-section {
+  padding: 4rem 6rem;
+  background: #fff;
+  text-align: center;
+}
+
+.category-heading {
+  color: black;
+  font-size: 1.5rem;
+  letter-spacing: 0.18em;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+/* Grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  gap: 2.5rem;
+}
+
+/* Card */
+.category-card {
+  text-align: center;
+  height: 450px;
+  width: 255px;
+}
+
+.category-image {
+  background: #fafafa;
+  padding:1.5rem 1.5rem 0rem 1.5rem;
+  
+}
+
+.category-image img {
+  width: 250px;
+  height: 400px;
+  object-fit: contain;
+}
+
+/* Links */
+.category-title {
+  display: inline-block;
+  font-size: 1.0rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #000;
+}

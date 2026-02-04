@@ -1,0 +1,19 @@
+.customization-page {
+  background: #fff;
+}
+
+/* Banner */
+.customization-banner img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Reuse same product grid style */
+/* .products-grid {
+  padding: 4rem 6rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+} */

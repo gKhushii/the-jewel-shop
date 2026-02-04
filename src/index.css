@@ -1,0 +1,23 @@
+/* Remove Vite default layout constraints */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #1c1c1c;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

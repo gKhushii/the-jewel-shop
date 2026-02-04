@@ -1,0 +1,207 @@
+/* CATEGORY STRIP */
+.category-strip {
+  display: flex;
+  gap: 2rem;
+  /* padding: 2rem 6rem; */
+  overflow-x: auto;
+}
+.customization-tile {
+  min-width: 400px;
+  text-align: center;
+  cursor: pointer;
+}
+.customization-tile img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: #fafafa;
+}
+
+.category-tile {
+  min-width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+/* ACTIVE STATE (matches screenshot) */
+.category-tile.active .tile-image {
+  background: #fff;
+  box-shadow:
+    inset 0 0 0 5px #000,   /* thin inner border */
+    0 10px 30px rgba(0, 0, 0, 0.2); /* subtle lift */
+}
+.category-tile.active .tile-title {
+  color: #000;               /* darker */
+  font-weight: 600;          /* stronger presence */
+}
+.category-tile.active .tile-title::after {
+  transform: scaleX(1);      /* underline stays visible */
+  transform-origin: left;
+}
+ 
+.tile-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  position: relative;
+  background: #fafafa;
+}
+
+.tile-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  /* padding: 0.8rem; */
+  display: block;
+  background: #fafafa;
+}
+
+.tile-title {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0.6rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: #494747;
+  display: inline-block;
+}
+
+/* underline */
+.tile-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+/* hover: underline grows left → right */
+.category-tile:hover .tile-title::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* mouse leave: underline moves right & disappears */
+.category-tile .tile-title::after {
+  transform-origin: right;
+}
+
+
+
+/* HEADER */
+.category-header {
+  padding: 2rem 0rem 0rem 2rem;   /* reduced from 3rem */
+}
+
+/* Row layout */
+.header-content {
+  display: flex;
+  align-items: center;  /* 🔥 THIS is the key fix */
+  gap: 4rem;
+}
+
+/* Title */
+.header-content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  white-space: nowrap;
+  margin: 0;           /* remove default margin */
+}
+
+/* Description */
+.header-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  /* max-width: 520px; */
+  margin: 0;           /* remove default margin */
+}
+
+/* PRODUCTS */
+.products-grid {
+  padding: 3rem 6rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+.productt-card {
+  background-color: rgb(248, 243, 243);
+  /* padding: 1rem; */
+  border-radius: 10px;
+  display: inline-block;      /* key line */
+  width: 15rem;
+  height: 21rem;         /* key line */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.productt-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.productt-card img {
+  width: auto;
+  width: 15rem;
+  height: 16rem;
+  object-fit: contain;
+  display: block;
+  /* margin-bottom: 1rem; */
+  border-radius: 8px;
+  /* background-color: rgb(248, 243, 243); */
+  /* padding: 0.5rem; */
+}
+.title-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-grid h4 {
+  height: 0.1rem;
+  font-size: 0.7rem;
+}
+.title-grid p{
+  height: 0.1rem;
+  font-size: 0.7rem;
+}
+.product-image-wrap {
+  position: relative;
+  background: #fafafa;
+  overflow: hidden;
+}
+
+.product-img {
+  width: fit-content;
+  width: 15rem;
+  height: 16rem;
+  object-fit: contain;
+  transition: opacity 0.4s ease;
+} 
+
+/* Hover image initially hidden */
+.product-img.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* On hover: swap images */
+.productt-card:hover .product-img.primary {
+  opacity: 0.6;
+}
+
+.productt-card:hover .product-img.hover {
+  opacity: 1;
+}
+/* Hover swap ONLY if hover image exists */
+.productt-card.has-hover:hover .product-img.primary {
+  opacity: 0;
+}
+
+.productt-card.has-hover:hover .product-img.hover {
+  opacity: 1;
+}

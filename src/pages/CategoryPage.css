@@ -1,0 +1,74 @@
+.category-page {
+  padding: 2rem 9rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Category block */
+.category-block {
+  height: 20rem;
+  width: 60rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  background: #f3e5da;
+  border-radius: 12px;
+  overflow: hidden;
+   margin: 2rem;
+}
+ 
+/* Reverse layout */
+.category-block.reverse {
+  grid-template-columns: 1.2fr 0.36fr;
+}
+
+.category-block.reverse .category-imagee {
+  order: 2;
+}
+
+/* Image */
+.category-imagee img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: fill;
+ 
+}
+
+/* Content */
+.category-content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.category-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.category-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 420px;
+}
+
+/* Button */
+.category-btn {
+  width: fit-content;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  background: black;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.category-btn:hover {
+  background-color: white;
+  font-size: 0.9rem;
+  color: #e0b55f !important;
+  border: 1px solid black;
+}

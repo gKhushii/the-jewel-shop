@@ -1,0 +1,85 @@
+/* ---------- Hero Section ---------- */
+.hero {
+  height: calc(100vh - 72px);
+  background-image: url("/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+}
+
+/* Optional soft overlay for readability
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(233, 227, 215, 0.88); beige tint
+} */
+
+.hero {
+  position: relative;
+}
+
+/* Text container */
+.hero-overlay {
+  position: relative;
+  padding: 6rem 4rem;
+  max-width: 720px;
+  color: #000;
+}
+
+/* Text styles */
+.hero-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtext {
+  max-width: 420px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+/* Buttons */
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-btn {
+  padding: 0.8rem 1.8rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  border: 1px solid #000;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.hero-btn.primary {
+  background-color: #000;
+  color: #fff;
+}
+
+.hero-btn.secondary:hover {
+  background-color: #000;
+  color: #e6c27a;
+}
+
+
+/* .hero-btn.secondary:hover {
+  background-color: #000;
+  color: #e6c27a;
+} */
