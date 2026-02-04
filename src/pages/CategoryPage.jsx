@@ -44,7 +44,7 @@ export default function CategoryPage() {
               <button
                 className="category-btn"
                 onClick={() => navigate(`/products/${cat.slug}`)}
-              >
+              > 
                 Explore
               </button>
             </div>

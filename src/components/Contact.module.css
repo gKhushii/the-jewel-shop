@@ -1,0 +1,102 @@
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  min-height: 90vh;
+  background-color: #f3ede4;
+}
+
+/* Left video */
+.media {
+  padding: 2rem 4rem;
+  position: relative;
+  overflow: hidden;;
+}
+
+.media video {
+  width: 30rem;
+  height: 35rem;
+  object-fit: cover;
+}
+
+/* Right content */
+.content {
+  padding: 0.7rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content h2 {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  color: #000;
+}
+
+/* Wrapper */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+  color: #000;
+}
+
+.field input,
+.field textarea {
+  border: none;
+  border-bottom: 1px solid #000;
+  background: transparent;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.form button {
+  margin-top: 1.5rem;
+  width: fit-content;
+  padding: 0.7rem 2.5rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+/* Info */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 0.85rem;
+}
+
+.info h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  color: #000;
+}
+
+.socials {
+  display: flex;
+  gap: 1.2rem;
+  font-weight: 600;
+}

@@ -10,9 +10,9 @@ import AtYourService from "./components/AtYourService";
 import CategoryPage from "./pages/CategoryPage";
 import "./App.css";
 import CategoryProducts from "./pages/CategoryProducts";
-
 import CustomizationPage from "./pages/CustomizationPage";
-
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -31,17 +31,14 @@ function App() {
               <CategorySection />
               <AtYourService />
               <ReviewsMarquee />
-
-              {/* Contact placeholder */}
-              <section id="contact" style={{ padding: "4rem 1rem" }}>
-                <h2>Contact</h2>
-                <p>WhatsApp / Instagram coming soon</p>
-              </section>
+              <Contact />
+              <Footer />
             </>
           }
         />
 
         {/* Products / Categories Page */}
+        <Route path="/products/:slug" element={<CategoryProducts />} />
         <Route path="/products" element={<CategoryPage />} />
         <Route path="/products/:slug" element={<CategoryProducts />} />
         <Route path="/customizations" element={<CustomizationPage />} />

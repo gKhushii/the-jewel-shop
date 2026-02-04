@@ -22,13 +22,13 @@
 /* Card */
 .category-card {
   text-align: center;
-  height: 450px;
+  height: 400px;
   width: 255px;
 }
 
 .category-image {
   background: #fafafa;
-  padding:1.5rem 1.5rem 0rem 1.5rem;
+  /* padding: 1.5rem ; */
   
 }
 

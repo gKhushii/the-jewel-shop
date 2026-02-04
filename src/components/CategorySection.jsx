@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import sanityClient from "../sanityClient";
 import "./CategorySection.css";
 
@@ -15,6 +16,7 @@ export default function CategorySection() {
         ] | order(order asc) {
           _id,
           title,
+          "slug": slug.current,
           "imageUrl": image.asset->url
         }
       `)
@@ -33,9 +35,13 @@ export default function CategorySection() {
               <img src={cat.imageUrl} alt={cat.title} />
             </div>
 
-            <a href="#" className="category-title">
+            {/* LINK TO CATEGORY PAGE */}
+            <Link
+              to={`/products/${cat.slug}`}
+              className="category-title"
+            >
               {cat.title}
-            </a>
+            </Link>
           </div>
         ))}
       </div>

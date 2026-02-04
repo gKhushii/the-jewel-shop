@@ -1,7 +1,8 @@
 import React from 'react';
 import './Home.css';
-
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <section id="home" className="hero">
       <div className="hero-overlay">
@@ -16,7 +17,7 @@ export default function Home() {
         </p>
 
         <div className="hero-actions">
-          <button className="hero-btn secondary">
+          <button className="hero-btn secondary" onClick={() => navigate("/products")}>
             SHOP NOW
           </button>
         </div>
