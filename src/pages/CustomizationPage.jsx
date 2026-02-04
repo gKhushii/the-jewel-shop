@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../sanityClient";
 import "./CustomizationPage.css";
+import AtYourService from "../components/AtYourService";
+import Footer from "../components/Footer";
 
 export default function CustomizationPage() {
   const [products, setProducts] = useState([]);
@@ -62,6 +64,9 @@ export default function CustomizationPage() {
           </div>
         ))}
       </div>
+      <AtYourService/>
+    <Footer/>
     </section>
+    
   );
 }

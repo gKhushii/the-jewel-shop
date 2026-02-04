@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import sanityClient from "../sanityClient";
 import "./CategoryProducts.css";
+import Footer from "../components/Footer";
 
 export default function CategoryProducts() {
   const { slug } = useParams();
@@ -120,6 +121,7 @@ export default function CategoryProducts() {
           </div>
         ))}
       </div>
+      <Footer/>
     </section>
   );
 }

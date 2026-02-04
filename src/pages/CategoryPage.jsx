@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import sanityClient from "../sanityClient";
 import "./CategoryPage.css";
 import AtYourService from "../components/AtYourService";
+import Footer from "../components/Footer";
 
 export default function CategoryPage() {
   const [categories, setCategories] = useState([]);
@@ -53,6 +54,7 @@ export default function CategoryPage() {
       </section>
 
       <AtYourService />
+      <Footer/>
     </>
   );
 }
